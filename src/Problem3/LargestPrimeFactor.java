@@ -5,7 +5,10 @@ package Problem3;
 
 public class LargestPrimeFactor {
     static boolean isPrime(int n) {
-        for (int i = 2; i < n / 2; i++) {
+        if (n == 0 || n == 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= n; ++i) {
             if (n % i == 0) {
                 return false;
             }
@@ -17,7 +20,7 @@ public class LargestPrimeFactor {
         long n = 600851475143L;
         for (long i = 2L; i < n; ++i) {
             if (n % i == 0) {
-                if(isPrime((int)i)){
+                if (isPrime((int) i)) {
                     System.out.println(i);
                 }
             }
