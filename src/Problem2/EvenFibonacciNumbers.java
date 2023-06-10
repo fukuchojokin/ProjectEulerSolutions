@@ -15,19 +15,12 @@ public class EvenFibonacciNumbers {
     }
 
     public static void main(String[] args) {
-        int sum = 0;
-        int i = 2;
-        while (true) {
-            int x = fibonacci(i);
-            if (x > 4000000) {
-                break;
-            }
-            System.out.print(x + " ");
-            i++;
+        int  x, sum = 0, i  = 2;
+        while ((x = fibonacci(i++)) < 4000000) {
             if (x % 2 == 0) {
                 sum += x;
             }
         }
-        System.out.println("\nThe sum is " + sum);
+        System.out.println("The sum is " + sum);
     }
 }
